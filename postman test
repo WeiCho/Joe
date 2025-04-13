@@ -1,0 +1,25 @@
+https://api.practicesoftwaretesting.com/messages
+Scripts:
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+function assertNotEmpty(value, fieldName) {
+    pm.expect(value, `${fieldName} should not be null or empty`).to.not.be.oneOf([null, '']);
+}
+
+if (pm.response.status === 'OK') {
+    var jsonData = pm.response.json();
+    pm.test("Assert response", function () {
+        pm.expect(jsonData.id).to.be.a('string')
+        assertNotEmpty(jsonData.email, 'subject')
+        assertNotEmpty(jsonData.email, 'message')
+        assertNotEmpty(jsonData.email, 'status')
+        assertNotEmpty(jsonData.email, 'created_at')
+    });
+} else {
+    pm.test("Response should not contain ID", function () {
+        pm.expect(pm.response.text()).to.not.include('id');
+    });
+}
