@@ -23,13 +23,14 @@ def post_api(context, type, url, data, header, body=None):
 def assert_message(context):
   try:
       header = {'Content-Type': 'application/json'}
-      query_data = {'name': 'testmanager@grr.la',
-                     'subject': 'ECIP02-UI-12-001',
-                     'message': '2024-10-14 02:30:10',
-                     'email': 'ECIP02-UI-12-001;'}
+      query_data = {'name': 'test',
+                     'subject': 'test_api'
+                     'message': 'test_api',
+                     'email': 'test@grr.la'}
       message_api = context.post_api('json', 'https://api.practicesoftwaretesting.com/message', query_data, header)
 
       assert_that(message_api.status_code, equest('200'), 'Post API fail.')
+      assert_that(message_api['id'], is_not(None), 'Message is not currect.')
 
 
   except Exception as e:
