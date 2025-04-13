@@ -1,0 +1,36 @@
+import requests
+import json
+from hamcrest import *
+
+def post_api(context, type, url, data, header, body=None):
+    # 適用於 Content-Type 是 application/json，在 data 部分透過 JSON 格式來傳遞參數資料
+    if type == 'json': 
+        data_json = self.data_transfer_json(data)
+        if body is not None: data_json = body
+    # 適用於 Content-Type 是 application/x-www-form-urlencoded，在 data 部分使用瀏覽器原生的 form 傳統表單輸入資料
+    elif type == 'webform': data_json = data
+
+    # 以 header 來確認有沒有取得完整回傳資料
+    for _ in range(3):
+        response = res.post(url=url, data=data_json, headers=header)
+        if response.headers is not None: break
+    
+    return response
+
+
+
+
+def assert_message(context):
+  try:
+      header = {'Content-Type': 'application/json'}
+      query_data = {'name': 'testmanager@grr.la',
+                     'subject': 'ECIP02-UI-12-001',
+                     'message': '2024-10-14 02:30:10',
+                     'email': 'ECIP02-UI-12-001;'}
+      message_api = context.post_api('json', 'https://api.practicesoftwaretesting.com/message', query_data, header)
+
+      assert_that(message_api.status_code, equest('200'), 'Post API fail.')
+
+
+  except Exception as e:
+      raise e
