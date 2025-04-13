@@ -1,0 +1,1227 @@
+{
+  "info": {
+    "name": "Practice Software Testing - Messages API Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "\u2705 \u6b63\u5e38\u8f38\u5165",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u59d3\u540d\u542b\u7279\u6b8a\u5b57",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"@@!!\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u59d3\u540d\u70ba\u7a7a\u5b57\u4e32",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u59d3\u540d\u70ba null",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": null,\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u59d3\u540d\u70ba\u6578\u5b57",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": 12345,\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u4e0d\u50b3 name \u6b04\u4f4d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u6a19\u984c\u542b\u7279\u6b8a\u5b57",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"!@#$%^&*\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u6a19\u984c\u70ba\u7a7a\u5b57\u4e32",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u6a19\u984c\u70ba null",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": null,\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u6a19\u984c\u70ba\u6578\u5b57",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": 1234,\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u4e0d\u50b3 subject \u6b04\u4f4d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u8a0a\u606f\u542b\u7279\u6b8a\u5b57",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"!!!@@@###\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u8a0a\u606f\u70ba\u7a7a\u5b57\u4e32",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u8a0a\u606f\u70ba null",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": null,\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u8a0a\u606f\u70ba\u6578\u5b57",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": 456,\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u4e0d\u50b3 message \u6b04\u4f4d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"email\": \"AAAA@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c email \u683c\u5f0f\u932f\u8aa4",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"invalid_email\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c email \u9577\u5ea6\u8d85\u904e 64",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@test.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c email \u542b\u7279\u6b8a\u5b57\u5143",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"we!rd@te$st.com\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c email \u70ba\u7a7a\u5b57\u4e32",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": \"\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c email \u70ba null",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": null\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c email \u70ba\u6578\u5b57",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\",\n    \"email\": 123456\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "\u274c \u4e0d\u50b3 email \u6b04\u4f4d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"AA AA\",\n    \"subject\": \"return\",\n    \"message\": \"Quality is not an act, it is a habit. Strive for excellence every day!\"\n}"
+        },
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "messages"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "",
+              "if (pm.response.status === 'OK') {",
+              "    var jsonData = pm.response.json();",
+              "    pm.test(\"Response contains ID\", function () {",
+              "        pm.expect(jsonData.id).to.be.a('string');",
+              "    });",
+              "} else {",
+              "    pm.test(\"Response should not contain ID\", function () {",
+              "        pm.expect(pm.response.text()).to.not.include('id');",
+              "    });",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}
